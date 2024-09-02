@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Matrícula de Alunos</h1>
+        <br>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="nome" , class="form-label">Nome</label>
+                {{ form.nome }}
+            </div>
+            <div class="mb-3">
+                <label for="endereco" , class="form-label">Endereço</label>
+                {{ form.endereco }}
+            </div>
+            <div class="mb-3">
+                <label for="cidade" , class="form-label">Cidade</label>
+                {{ form.cidade }}
+            </div>
+            <div class="mb-3">
+                <label for="email" , class="form-label">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="curso" , class="form-label">Curso</label>
+                {{ form.curso }}
+            </div>
+            <div class="mb-3">
+                <label for="img" class="form-label">Imagem</label>
+                <input type="file" name="img" id="img" class="form-control">
+                {{ form.imagem }}
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
